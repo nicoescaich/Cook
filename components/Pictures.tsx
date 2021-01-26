@@ -1,25 +1,28 @@
 import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
-  container: {
-    paddingTop: 50,
-    flex: 1,
-  },
-  Logo: {
-    width: 100,
-    height: 100,
-  },
-});
 const DisplayAnImage = () => {
     return (
       <View style={styles.container}>
-        <Image
-          style={styles.Logo}
-          source={require('../assets/logoShareCook.png')}
-        />
-      </View>
+      <Image
+        style={styles.Logo}
+        source={require('../assets/logoShareCook.png')}
+      />
+    </View>
     );
   }
+  const styles = StyleSheet.create({
+    container: {
+      justifyContent:"center",
+      backgroundColor: "#61dafb",
+      flex: 1,
+      minHeight: 300,
+      
+    },
+    Logo: {
+      marginLeft: 65,
+      width: 290,
+    },
+  });
   
   export default DisplayAnImage;
