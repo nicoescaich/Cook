@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "826727201234",
+    "project_id": "sharecook-822a6",
+    "storage_bucket": "sharecook-822a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826727201234:android:a336da3d2fcba137aab00b",
+        "android_client_info": {
+          "package_name": "com.sharecook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826727201234-ko5shd6bfblt2nnk6lu6sbd00436nu4s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGwrIzhcPDx-O576WXFrwLSqfKM_2-eTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826727201234-ko5shd6bfblt2nnk6lu6sbd00436nu4s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

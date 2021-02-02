@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">826727201234-ko5shd6bfblt2nnk6lu6sbd00436nu4s.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">826727201234</string>
+    <string name="google_api_key" translatable="false">AIzaSyCGwrIzhcPDx-O576WXFrwLSqfKM_2-eTA</string>
+    <string name="google_app_id" translatable="false">1:826727201234:android:a336da3d2fcba137aab00b</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCGwrIzhcPDx-O576WXFrwLSqfKM_2-eTA</string>
+    <string name="google_storage_bucket" translatable="false">sharecook-822a6.appspot.com</string>
+    <string name="project_id" translatable="false">sharecook-822a6</string>
+</resources>
