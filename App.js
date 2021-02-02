@@ -3,7 +3,7 @@ import Home from './components/Home';
 export default class App extends Component {
 render() {
   return (
-    <Text></Text>
+    <Home />
   );
  }
 }
