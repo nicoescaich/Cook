@@ -5,7 +5,7 @@
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="16"
+8        android:minSdkVersion="26"
 9        android:targetSdkVersion="29" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -14,55 +14,186 @@
 12    <uses-permission android:name="android.permission.INTERNET" />
 12-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:4:5-67
 12-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:4:22-64
-13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-13-->[com.facebook.flipper:flipper:0.54.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\1c7787ec82631e0394972c76bdabe608\flipper-0.54.0\AndroidManifest.xml:16:5-76
-13-->[com.facebook.flipper:flipper:0.54.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\1c7787ec82631e0394972c76bdabe608\flipper-0.54.0\AndroidManifest.xml:16:22-73
-14
-15    <application
-15-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:6:5-25:19
-16        android:name="com.sharecook.MainApplication"
-16-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:7:7-38
-17        android:allowBackup="false"
-17-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:11:7-34
-18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.1.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\639e914bfc1efa21e36199d3ff2c5eef\core-1.1.0\AndroidManifest.xml:24:18-86
-19        android:debuggable="true"
-20        android:icon="@mipmap/ic_launcher"
-20-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:9:7-41
-21        android:label="@string/app_name"
-21-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:8:7-39
-22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:10:7-52
-23        android:theme="@style/AppTheme"
-23-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:12:7-38
-24        android:usesCleartextTraffic="true" >
-24-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\debug\AndroidManifest.xml:7:18-53
-25        <activity
-25-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:13:7-23:18
-26            android:name="com.sharecook.MainActivity"
-26-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:14:9-37
-27            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-27-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:16:9-86
-28            android:label="@string/app_name"
-28-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:15:9-41
-29            android:launchMode="singleTask"
-29-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:17:9-40
-30            android:windowSoftInputMode="adjustResize" >
-30-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:18:9-51
-31            <intent-filter>
-31-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:19:9-22:25
-32                <action android:name="android.intent.action.MAIN" />
-32-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:20:13-65
-32-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:20:21-62
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:21:13-73
-34-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:21:23-70
-35            </intent-filter>
-36        </activity>
-37        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-37-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:24:7-84
-37-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:24:17-81
-38    </application>
-39
-40</manifest>
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+13-->[com.facebook.flipper:flipper:0.54.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\54a7aae5b034135aecf18fe01026e016\flipper-0.54.0\AndroidManifest.xml:16:5-76
+13-->[com.facebook.flipper:flipper:0.54.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\54a7aae5b034135aecf18fe01026e016\flipper-0.54.0\AndroidManifest.xml:16:22-73
+14    <!-- <uses-sdk android:minSdkVersion="14" /> -->
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.firebase:firebase-firestore:22.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\52818b36caf8f5c435965b3670e6cc93\jetified-firebase-firestore-22.0.2\AndroidManifest.xml:13:5-79
+15-->[com.google.firebase:firebase-firestore:22.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\52818b36caf8f5c435965b3670e6cc93\jetified-firebase-firestore-22.0.2\AndroidManifest.xml:13:22-76
+16    <uses-permission android:name="android.permission.WAKE_LOCK" />
+16-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\1fe9fbb111f177e129b8b2060dcd6821\play-services-measurement-api-18.0.2\AndroidManifest.xml:24:5-68
+16-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\1fe9fbb111f177e129b8b2060dcd6821\play-services-measurement-api-18.0.2\AndroidManifest.xml:24:22-65
+17    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+17-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\93f1eb026960e45a089efbc3fb13f5e0\play-services-measurement-18.0.2\AndroidManifest.xml:26:5-110
+17-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\93f1eb026960e45a089efbc3fb13f5e0\play-services-measurement-18.0.2\AndroidManifest.xml:26:22-107
+18
+19    <application
+19-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:6:5-25:19
+20        android:name="com.sharecook.MainApplication"
+20-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:7:7-38
+21        android:allowBackup="false"
+21-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:11:7-34
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.1.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\8b707818bd543435f177dcfe0ccc56e5\core-1.1.0\AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:icon="@mipmap/ic_launcher"
+24-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:9:7-41
+25        android:label="@string/app_name"
+25-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:8:7-39
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:10:7-52
+27        android:theme="@style/AppTheme"
+27-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:12:7-38
+28        android:usesCleartextTraffic="true" >
+28-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\debug\AndroidManifest.xml:7:18-53
+29        <activity
+29-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:13:7-23:18
+30            android:name="com.sharecook.MainActivity"
+30-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:14:9-37
+31            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+31-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:16:9-86
+32            android:label="@string/app_name"
+32-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:15:9-41
+33            android:launchMode="singleTask"
+33-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:17:9-40
+34            android:windowSoftInputMode="adjustResize" >
+34-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:18:9-51
+35            <intent-filter>
+35-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:19:9-22:25
+36                <action android:name="android.intent.action.MAIN" />
+36-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:20:13-65
+36-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:20:21-62
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:21:13-73
+38-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:21:23-70
+39            </intent-filter>
+40        </activity>
+41        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+41-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:24:7-84
+41-->C:\Users\Escaich\Desktop\workspace\ShareCook\android\app\src\main\AndroidManifest.xml:24:17-81
+42
+43        <service
+43-->[com.google.firebase:firebase-firestore:22.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\52818b36caf8f5c435965b3670e6cc93\jetified-firebase-firestore-22.0.2\AndroidManifest.xml:17:9-23:19
+44            android:name="com.google.firebase.components.ComponentDiscoveryService"
+44-->[com.google.firebase:firebase-firestore:22.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\52818b36caf8f5c435965b3670e6cc93\jetified-firebase-firestore-22.0.2\AndroidManifest.xml:18:13-84
+45            android:directBootAware="true"
+45-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\2b2d7d8c1aaa699c2a759ee974a21406\jetified-firebase-common-19.5.0\AndroidManifest.xml:35:13-43
+46            android:exported="false" >
+46-->[com.google.firebase:firebase-firestore:22.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\52818b36caf8f5c435965b3670e6cc93\jetified-firebase-firestore-22.0.2\AndroidManifest.xml:19:13-37
+47            <meta-data
+47-->[com.google.firebase:firebase-firestore:22.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\52818b36caf8f5c435965b3670e6cc93\jetified-firebase-firestore-22.0.2\AndroidManifest.xml:20:13-22:85
+48                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+48-->[com.google.firebase:firebase-firestore:22.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\52818b36caf8f5c435965b3670e6cc93\jetified-firebase-firestore-22.0.2\AndroidManifest.xml:21:17-111
+49                android:value="com.google.firebase.components.ComponentRegistrar" />
+49-->[com.google.firebase:firebase-firestore:22.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\52818b36caf8f5c435965b3670e6cc93\jetified-firebase-firestore-22.0.2\AndroidManifest.xml:22:17-82
+50            <meta-data
+50-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\1fe9fbb111f177e129b8b2060dcd6821\play-services-measurement-api-18.0.2\AndroidManifest.xml:30:13-32:85
+51                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+51-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\1fe9fbb111f177e129b8b2060dcd6821\play-services-measurement-api-18.0.2\AndroidManifest.xml:31:17-139
+52                android:value="com.google.firebase.components.ComponentRegistrar" />
+52-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\1fe9fbb111f177e129b8b2060dcd6821\play-services-measurement-api-18.0.2\AndroidManifest.xml:32:17-82
+53            <meta-data
+53-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\fa274d9cd4a59325d91621edcf883f5e\firebase-installations-16.3.5\AndroidManifest.xml:18:13-20:85
+54                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+54-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\fa274d9cd4a59325d91621edcf883f5e\firebase-installations-16.3.5\AndroidManifest.xml:19:17-127
+55                android:value="com.google.firebase.components.ComponentRegistrar" />
+55-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\fa274d9cd4a59325d91621edcf883f5e\firebase-installations-16.3.5\AndroidManifest.xml:20:17-82
+56            <!--
+57                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+58                clients to use it as well, by defining this registrar in their own core/common library.
+59            -->
+60            <meta-data
+60-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\2b2d7d8c1aaa699c2a759ee974a21406\jetified-firebase-common-19.5.0\AndroidManifest.xml:43:13-45:85
+61                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+61-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\2b2d7d8c1aaa699c2a759ee974a21406\jetified-firebase-common-19.5.0\AndroidManifest.xml:44:17-121
+62                android:value="com.google.firebase.components.ComponentRegistrar" />
+62-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\2b2d7d8c1aaa699c2a759ee974a21406\jetified-firebase-common-19.5.0\AndroidManifest.xml:45:17-82
+63        </service>
+64
+65        <provider
+65-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\2b2d7d8c1aaa699c2a759ee974a21406\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
+66            android:name="com.google.firebase.provider.FirebaseInitProvider"
+66-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\2b2d7d8c1aaa699c2a759ee974a21406\jetified-firebase-common-19.5.0\AndroidManifest.xml:27:13-77
+67            android:authorities="com.sharecook.firebaseinitprovider"
+67-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\2b2d7d8c1aaa699c2a759ee974a21406\jetified-firebase-common-19.5.0\AndroidManifest.xml:28:13-72
+68            android:directBootAware="true"
+68-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\2b2d7d8c1aaa699c2a759ee974a21406\jetified-firebase-common-19.5.0\AndroidManifest.xml:29:13-43
+69            android:exported="false"
+69-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\2b2d7d8c1aaa699c2a759ee974a21406\jetified-firebase-common-19.5.0\AndroidManifest.xml:30:13-37
+70            android:initOrder="100" />
+70-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\2b2d7d8c1aaa699c2a759ee974a21406\jetified-firebase-common-19.5.0\AndroidManifest.xml:31:13-36
+71
+72        <activity
+72-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\96c1df4837b737c04f5cf6c4192b56e6\play-services-auth-19.0.0\AndroidManifest.xml:23:9-27:75
+73            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+73-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\96c1df4837b737c04f5cf6c4192b56e6\play-services-auth-19.0.0\AndroidManifest.xml:24:13-93
+74            android:excludeFromRecents="true"
+74-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\96c1df4837b737c04f5cf6c4192b56e6\play-services-auth-19.0.0\AndroidManifest.xml:25:13-46
+75            android:exported="false"
+75-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\96c1df4837b737c04f5cf6c4192b56e6\play-services-auth-19.0.0\AndroidManifest.xml:26:13-37
+76            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+76-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\96c1df4837b737c04f5cf6c4192b56e6\play-services-auth-19.0.0\AndroidManifest.xml:27:13-72
+77        <!--
+78            Service handling Google Sign-In user revocation. For apps that do not integrate with
+79            Google Sign-In, this service will never be started.
+80        -->
+81        <service
+81-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\96c1df4837b737c04f5cf6c4192b56e6\play-services-auth-19.0.0\AndroidManifest.xml:33:9-37:51
+82            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+82-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\96c1df4837b737c04f5cf6c4192b56e6\play-services-auth-19.0.0\AndroidManifest.xml:34:13-89
+83            android:exported="true"
+83-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\96c1df4837b737c04f5cf6c4192b56e6\play-services-auth-19.0.0\AndroidManifest.xml:35:13-36
+84            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+84-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\96c1df4837b737c04f5cf6c4192b56e6\play-services-auth-19.0.0\AndroidManifest.xml:36:13-107
+85            android:visibleToInstantApps="true" />
+85-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\96c1df4837b737c04f5cf6c4192b56e6\play-services-auth-19.0.0\AndroidManifest.xml:37:13-48
+86
+87        <activity
+87-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\ba5e9b7ba64e148f800594f95a188cbb\play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+88            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+88-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\ba5e9b7ba64e148f800594f95a188cbb\play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+89            android:exported="false"
+89-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\ba5e9b7ba64e148f800594f95a188cbb\play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+90            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+90-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\ba5e9b7ba64e148f800594f95a188cbb\play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+91
+92        <receiver
+92-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\93f1eb026960e45a089efbc3fb13f5e0\play-services-measurement-18.0.2\AndroidManifest.xml:29:9-33:20
+93            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+93-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\93f1eb026960e45a089efbc3fb13f5e0\play-services-measurement-18.0.2\AndroidManifest.xml:30:13-85
+94            android:enabled="true"
+94-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\93f1eb026960e45a089efbc3fb13f5e0\play-services-measurement-18.0.2\AndroidManifest.xml:31:13-35
+95            android:exported="false" >
+95-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\93f1eb026960e45a089efbc3fb13f5e0\play-services-measurement-18.0.2\AndroidManifest.xml:32:13-37
+96        </receiver>
+97
+98        <service
+98-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\93f1eb026960e45a089efbc3fb13f5e0\play-services-measurement-18.0.2\AndroidManifest.xml:35:9-38:40
+99            android:name="com.google.android.gms.measurement.AppMeasurementService"
+99-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\93f1eb026960e45a089efbc3fb13f5e0\play-services-measurement-18.0.2\AndroidManifest.xml:36:13-84
+100            android:enabled="true"
+100-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\93f1eb026960e45a089efbc3fb13f5e0\play-services-measurement-18.0.2\AndroidManifest.xml:37:13-35
+101            android:exported="false" />
+101-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\93f1eb026960e45a089efbc3fb13f5e0\play-services-measurement-18.0.2\AndroidManifest.xml:38:13-37
+102        <service
+102-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\93f1eb026960e45a089efbc3fb13f5e0\play-services-measurement-18.0.2\AndroidManifest.xml:39:9-43:72
+103            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+103-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\93f1eb026960e45a089efbc3fb13f5e0\play-services-measurement-18.0.2\AndroidManifest.xml:40:13-87
+104            android:enabled="true"
+104-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\93f1eb026960e45a089efbc3fb13f5e0\play-services-measurement-18.0.2\AndroidManifest.xml:41:13-35
+105            android:exported="false"
+105-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\93f1eb026960e45a089efbc3fb13f5e0\play-services-measurement-18.0.2\AndroidManifest.xml:42:13-37
+106            android:permission="android.permission.BIND_JOB_SERVICE" />
+106-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\93f1eb026960e45a089efbc3fb13f5e0\play-services-measurement-18.0.2\AndroidManifest.xml:43:13-69
+107
+108        <meta-data
+108-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\e3d1c0f00cd607b97c6622b92fc505cd\jetified-play-services-basement-17.1.1\AndroidManifest.xml:23:9-25:69
+109            android:name="com.google.android.gms.version"
+109-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\e3d1c0f00cd607b97c6622b92fc505cd\jetified-play-services-basement-17.1.1\AndroidManifest.xml:24:13-58
+110            android:value="@integer/google_play_services_version" />
+110-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\Escaich\.gradle\caches\transforms-2\files-2.1\e3d1c0f00cd607b97c6622b92fc505cd\jetified-play-services-basement-17.1.1\AndroidManifest.xml:25:13-66
+111    </application>
+112
+113</manifest>

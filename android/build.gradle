@@ -3,7 +3,7 @@
 buildscript {
     ext {
         buildToolsVersion = "29.0.2"
-        minSdkVersion = 16
+        minSdkVersion = 26
         compileSdkVersion = 29
         targetSdkVersion = 29
     }
@@ -13,12 +13,31 @@ buildscript {
     }
     dependencies {
         classpath("com.android.tools.build:gradle:3.5.3")
+        classpath 'com.google.gms:google-services:4.3.5'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
         classpath 'com.google.gms:google-services:4.3.3'
     }
 }
+project.ext {
+  set('react-native', [
+    versions: [
+      // Overriding Build/Android SDK Versions
+      android : [
+        minSdk    : 6,
+        targetSdk : 30,
+        compileSdk: 30,
+        buildTools: "30.0.2"
+      ],
 
+      // Overriding Library SDK Versions
+      firebase: [
+        // Override Firebase SDK Version
+        bom           : "26.0.0"
+      ],
+    ],
+  ])
+}
 allprojects {
     repositories {
         mavenLocal()
