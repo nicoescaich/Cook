@@ -14,7 +14,6 @@ const HomeImage = () => {
   const styles = StyleSheet.create({
     container: {
       justifyContent:"center",
-      backgroundColor: "#61dafb",
       flex: 1,
       minHeight: 300,
       

@@ -14,10 +14,9 @@ const AuthImage = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-      
-    },
+      },
     Logo: {
-      marginLeft: 125,
+      marginLeft: 130,
       maxHeight: 155,
       maxWidth: 140,
     },
